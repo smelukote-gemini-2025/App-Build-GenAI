@@ -57,7 +57,16 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080) # Cloud Run expects port 8080
+
+
+![alt text](image-5.png)
+
+
+![alt text](image-6.png)
+
+
 ####
+
 
 requirements.txt (your Python dependencies):
 
@@ -98,6 +107,8 @@ __pycache__
 ######
 
 Deploy to Cloud Run:
+![alt text](image-7.png)
+
 
 Install Google Cloud SDK: If you haven't already, install the gcloud command-line tool.
 Authenticate: Run gcloud auth login and gcloud config set project YOUR_PROJECT_ID . Your project ID is cs-poc-lhsovao7bcucdrmgyhgjrvg .
