@@ -49,7 +49,6 @@ Here's a high-level overview of the steps and considerations for building and de
 Deploy to Cloud Run:
 ![alt text](image-7.png)
 
-
 Install Google Cloud SDK: If you haven't already, install the gcloud command-line tool.
 Authenticate: Run gcloud auth login and gcloud config set project YOUR_PROJECT_ID . Your project ID is cs-poc-lhsovao7bcucdrmgyhgjrvg .
 Deploy command: Navigate to your my-flask-app directory in your terminal and run:
