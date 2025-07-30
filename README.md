@@ -33,30 +33,10 @@ Here are the high-level implementation steps for your GenAI application design:
     -   Set up monitoring to track the application's performance and identify any issues.
 ####
 ### Create a sample web app using python and flask ####
-To create a simple Python and Flask framework web application on Google Cloud, you would typically use Cloud Run or App Engine . Cloud Run is often preferred for its flexibility and serverless nature, allowing you to deploy containerized applications without managing servers.
+-   To create a simple Python and Flask framework web application on Google Cloud, you would typically use Cloud Run or App Engine . 
+-   Cloud Run is often preferred for its flexibility and serverless nature, allowing you to deploy containerized applications without managing servers.
 
 Here's a high-level overview of the steps and considerations for building and deploying a simple Flask app:
-
-1. Create your Flask application:
-2. Project Structure:
-   1. my-flask-app/
-├── app.py
-├── requirements.txt
-├── Dockerfile  (for Cloud Run)
-└── .gcloudignore
-
-app.py
-
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Hello, Google Cloud!'
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080) # Cloud Run expects port 8080
 
 
 ![alt text](image-5.png)
@@ -64,46 +44,6 @@ if __name__ == '__main__':
 
 ![alt text](image-6.png)
 
-
-####
-
-
-requirements.txt (your Python dependencies):
-
-Flask
-
-#######
-Prepare for Deployment (Cloud Run recommended):
-
-Dockerfile (for Cloud Run): This tells Cloud Run how to build your application into a container image.
-# Use the official Python image
-FROM python:3.9-slim-buster
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy the requirements file and install dependencies
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-# Copy the rest of your application code
-COPY . .
-
-# Expose the port your app runs on
-EXPOSE 8080
-
-# Command to run your application
-CMD ["python", "app.py"]
-####
-.gcloudignore (optional, for faster deployments):
-This file specifies files and directories to ignore when deploying to Cloud Run, similar to .gitignore 
-
-#####
-
-.git
-.venv
-__pycache__
-*.pyc
 ######
 
 Deploy to Cloud Run:
