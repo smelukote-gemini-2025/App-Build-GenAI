@@ -12,3 +12,4 @@
 ![alt text](image-5.png)
 
 gcloud run deploy retrieval-service --image gcr.io/<project_id/retrieval-service-image  --platform managed  --region us-west1  --allow-unauthenticated
+![alt text](image-8.png)
