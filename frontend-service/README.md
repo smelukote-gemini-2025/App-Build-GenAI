@@ -12,3 +12,5 @@ gcloud run deploy frontend \
     --region us-west1 \
     --allow-unauthenticated \
     --set-env-vars RETRIEVAL_SERVICE_URL="https://YOUR_RETRIEVAL_SERVICE_URL.run.app"
+
+    ![alt text](image-8.png)
